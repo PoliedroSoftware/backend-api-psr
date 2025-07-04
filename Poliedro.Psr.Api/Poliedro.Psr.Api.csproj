@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<NoWarn>$(NoWarn);1591</NoWarn>
+	<UserSecretsId>86e29832-7cb6-434f-88e2-25dfbd0423c6</UserSecretsId>
+	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.FormRecognizer" Version="4.1.0" />
+    <PackageReference Include="Azure.AI.Vision.ImageAnalysis" Version="1.0.0-beta.3" />
+    <PackageReference Include="Azure.Core" Version="1.44.1" />
+    <PackageReference Include="Azure.Identity" Version="1.12.1" />
+    <PackageReference Include="FluentValidation" Version="11.10.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.70" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.ComputerVision" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Azure.Devices.Client" Version="1.42.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.10" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="PdfPig" Version="0.1.9" />
+    <PackageReference Include="PDFsharp" Version="6.1.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.2" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="3.0.1" />
+    <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.4" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="10.0.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.16" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.8.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pinecone\Pinecone.csproj" />
+    <ProjectReference Include="..\Poliedro.Psr.Application\Poliedro.Psr.Application.csproj" />
+    <ProjectReference Include="..\Poliedro.Psr.Domain\Poliedro.Psr.Domain.csproj" />
+    <ProjectReference Include="..\Poliedro.Psr.Infraestructure.External.Azure\Poliedro.Psr.Infraestructure.External.Azure.csproj" />
+    <ProjectReference Include="..\Poliedro.Psr.Application\Poliedro.Psr.Application.csproj" />
+    <ProjectReference Include="..\Poliedro.Psr.Domain\Poliedro.Psr.Domain.csproj" />
+    <ProjectReference Include="..\Poliedro.Psr.Infraestructure.Worker\Poliedro.Psr.Infraestructure.Worker.csproj" />
+    <ProjectReference Include="..\Poliedro.Psr.Infraestruture.Persistence.Mongo\Poliedro.Psr.Infraestruture.Persistence.Mongo.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<None Remove="appsettings.json" />
+		<None Remove="appsettings.Development.json" />
+	</ItemGroup>
+
+</Project>
